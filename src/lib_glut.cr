@@ -1,5 +1,4 @@
-require "./constants"
-require "./functions"
+require "./glut/**"
 
 @[Link("glut")]
 lib LibGlut
