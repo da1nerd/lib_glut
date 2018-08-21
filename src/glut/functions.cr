@@ -12,11 +12,11 @@ lib LibGlut
   fun main_loop = glutMainLoop() : Void
 
   # Window management functions
-  fun create_window = glutCreateWindow(title : LibC::Char*) : Void
-  fun create_sub_window = glutCreateSubWindow(window : LibC::Int, x : LibC::Int, y : LibC::Int, width : LibC::Int, height : LibC::Int) : Void
+  fun create_window = glutCreateWindow(title : LibC::Char*) : LibC::Int
+  fun create_sub_window = glutCreateSubWindow(window : LibC::Int, x : LibC::Int, y : LibC::Int, width : LibC::Int, height : LibC::Int) : LibC::Int
   fun destroy_window = glutDestroyWindow(window : LibC::Int) : Void
   fun set_window = glutSetWindow(window : LibC::Int) : Void
-  fun get_window = glutGetWindow() : Void
+  fun get_window = glutGetWindow() : LibC::Int
   fun set_window_title = glutSetWindowTitle(title : LibC::Char*) : Void
   fun set_icon_title = glutSetIconTitle(title : LibC::Char*) : Void
   fun reshape_window = glutReshapeWindow(width : LibC::Int, height : LibC::Int) : Void
