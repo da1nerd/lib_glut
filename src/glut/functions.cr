@@ -1,4 +1,5 @@
 lib LibGlut
+  alias Enum = UInt32
 
   # Initialization functions
   fun init = glutInit(argc : LibC::Int*, argv : LibC::Char**) : Void
