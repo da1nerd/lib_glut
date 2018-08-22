@@ -71,6 +71,7 @@ lib LibGlut
   fun reshape_func = glutReshapeFunc(callback : (LibC::Int, LibC::Int) -> Void) : Void
   fun visibility_func = glutVisibilityFunc(callback : LibC::Int -> Void) : Void
   fun display_func = glutDisplayFunc(callback : Void -> Void) : Void
+  fun close_func = glutCloseFunc(callback : Void -> Void) : Void
   fun mouse_func = glutMouseFunc(callback : (LibC::Int, LibC::Int, LibC::Int, LibC::Int) -> Void) : Void
   fun motion_func = glutMotionFunc(callback : (LibC::Int, LibC::Int) -> Void) : Void
   fun passive_motion_func = glutPassiveMotionFunc(callback : (LibC::Int, LibC::Int) -> Void) : Void
@@ -93,6 +94,7 @@ lib LibGlut
   fun tablet_button_func = glutTabletButtonFunc(callback : (LibC::Int, LibC::Int, LibC::Int, LibC::Int) -> Void) : Void
 
   # State setting and retrieval functions
+  fun set_option = glutSetOption(eWhat : Enum, val : LibC::Int) : Void
   fun get = glutGet(query : Enum) : LibC::Int
   fun device_get = glutDeviceGet(query : Enum) : LibC::Int
   fun get_modifiers = glutGetModifiers() : LibC::Int
