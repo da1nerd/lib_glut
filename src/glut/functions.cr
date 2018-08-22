@@ -94,7 +94,7 @@ lib LibGlut
   fun tablet_button_func = glutTabletButtonFunc(callback : (LibC::Int, LibC::Int, LibC::Int, LibC::Int) -> Void) : Void
 
   # State setting and retrieval functions
-  fun set_option = glutSetOption(eWhat : Enum, val : LibC::Int) : Void
+  fun set_option = glutSetOption(option_flag : Enum, value : LibC::Int) : Void
   fun get = glutGet(query : Enum) : LibC::Int
   fun device_get = glutDeviceGet(query : Enum) : LibC::Int
   fun get_modifiers = glutGetModifiers() : LibC::Int
@@ -158,5 +158,63 @@ lib LibGlut
   # Misc functions
   fun extension_supported = glutExtensionSupported(extension : LibC::Char*) : LibC::Int
   fun report_errors = glutReportErrors() : Void
+
+  #
+  # Freeglut extension not included in standard GLUT
+  #
+
+  # Process loop function, see freeglut_main.c
+  fun exit = glutExit() : Void
+
+  # Window management functions, see freeglut_window.c
+  fun full_screen_toggle = glutFullScreenToggle() : Void
+  fun leave_full_screen = glutLeaveFullScreen() : Void
+
+# TODO: finish binding these
+  # Window-specific callback functions, see freeglut_callbacks.c
+# FGAPI void    FGAPIENTRY glutMouseWheelFunc( void (* callback)( int, int, int, int ) );
+# FGAPI void    FGAPIENTRY glutWMCloseFunc( void (* callback)( void ) );
+# A. Donev: Also a destruction callback for menus
+# FGAPI void    FGAPIENTRY glutMenuDestroyFunc( void (* callback)( void ) );
+
+  # State setting and retrieval functions, see freeglut_state.c
+# FGAPI int *   FGAPIENTRY glutGetModeValues(GLenum mode, int * size);
+# A.Donev: User-data manipulation
+# FGAPI void*   FGAPIENTRY glutGetWindowData( void );
+# FGAPI void    FGAPIENTRY glutSetWindowData(void* data);
+# FGAPI void*   FGAPIENTRY glutGetMenuData( void );
+# FGAPI void    FGAPIENTRY glutSetMenuData(void* data);
+
+# Font stuff, see freeglut_font.c
+# FGAPI int     FGAPIENTRY glutBitmapHeight( void* font );
+# FGAPI GLfloat FGAPIENTRY glutStrokeHeight( void* font );
+# FGAPI void    FGAPIENTRY glutBitmapString( void* font, const unsigned char *string );
+# FGAPI void    FGAPIENTRY glutStrokeString( void* font, const unsigned char *string );
+
+# Geometry functions, see freeglut_geometry.c
+# FGAPI void    FGAPIENTRY glutWireRhombicDodecahedron( void );
+# FGAPI void    FGAPIENTRY glutSolidRhombicDodecahedron( void );
+# FGAPI void    FGAPIENTRY glutWireSierpinskiSponge ( int num_levels, GLdouble offset[3], GLdouble scale );
+# FGAPI void    FGAPIENTRY glutSolidSierpinskiSponge ( int num_levels, GLdouble offset[3], GLdouble scale );
+# FGAPI void    FGAPIENTRY glutWireCylinder( GLdouble radius, GLdouble height, GLint slices, GLint stacks);
+# FGAPI void    FGAPIENTRY glutSolidCylinder( GLdouble radius, GLdouble height, GLint slices, GLint stacks);
+
+# Extension functions, see freeglut_ext.c
+#typedef void (*GLUTproc)();
+#FGAPI GLUTproc FGAPIENTRY glutGetProcAddress( const char *procName );
+
+# Multi-touch/multi-pointer extensions
+# FGAPI void FGAPIENTRY glutMultiEntryFunc( void (* callback)( int, int ) );
+# FGAPI void FGAPIENTRY glutMultiButtonFunc( void (* callback)( int, int, int, int, int ) );
+# FGAPI void FGAPIENTRY glutMultiMotionFunc( void (* callback)( int, int, int ) );
+# FGAPI void FGAPIENTRY glutMultiPassiveFunc( void (* callback)( int, int, int ) );
+
+# Initialization functions, see freeglut_init.c
+# FGAPI void    FGAPIENTRY glutInitContextVersion( int majorVersion, int minorVersion );
+# FGAPI void    FGAPIENTRY glutInitContextFlags( int flags );
+# FGAPI void    FGAPIENTRY glutInitContextProfile( int profile );
+
+# FGAPI void    FGAPIENTRY glutInitErrorFunc( void (* vError)( const char *fmt, va_list ap ) );
+# FGAPI void    FGAPIENTRY glutInitWarningFunc( void (* vWarning)( const char *fmt, va_list ap ) );
 
 end

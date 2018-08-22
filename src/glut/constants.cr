@@ -193,4 +193,79 @@ lib LibGlut
   GAME_MODE_REFRESH_RATE = 0x0005
   GAME_MODE_DISPLAY_CHANGED = 0x0006
 
+  #Additional GLUT Key definitions for the Special key function
+  KEY_NUM_LOCK = 0x006D
+  KEY_BEGIN = 0x006E
+  KEY_DELETE = 0x006F
+  KEY_SHIFT_L = 0x0070
+  KEY_SHIFT_R = 0x0071
+  KEY_CTRL_L = 0x0072
+  KEY_CTRL_R = 0x0073
+  KEY_ALT_L = 0x0074
+  KEY_ALT_R = 0x0075
+
+  # GLUT API Extension macro definitions -- behaviour when the user clicks on an "x" to close a window
+  ACTION_EXIT = 0
+  ACTION_GLUTMAINLOOP_RETURNS = 1
+  ACTION_CONTINUE_EXECUTION = 2
+
+  # Create a new rendering context when the user opens a new window?
+  CREATE_NEW_CONTEXT = 0
+  USE_CURRENT_CONTEXT = 1
+
+  #Direct/Indirect rendering context options (has meaning only in Unix/X11)
+  FORCE_INDIRECT_CONTEXT = 0
+  ALLOW_DIRECT_CONTEXT = 1
+  TRY_DIRECT_CONTEXT = 2
+  FORCE_DIRECT_CONTEXT = 3
+
+  #GLUT API Extension macro definitions -- the glutGet parameters
+  INIT_STATE = 0x007C
+
+  ACTION_ON_WINDOW_CLOSE = 0x01F9
+
+  WINDOW_BORDER_WIDTH = 0x01FA
+  WINDOW_BORDER_HEIGHT = 0x01FB
+
+  VERSION = 0x01FC
+
+  RENDERING_CONTEXT = 0x01FD
+  DIRECT_RENDERING = 0x01FE
+
+  FULL_SCREEN = 0x01FF
+
+  SKIP_STALE_MOTION_EVENTS = 0x0204
+
+  # New tokens for glutInitDisplayMode.
+  # Only one GLUT_AUXn bit may be used at a time.
+  # Value = 0x0400 is defined in OpenGLUT.
+  AUX = 0x1000
+
+  AUX1 = 0x1000
+  AUX2 = 0x2000
+  AUX3 = 0x4000
+  AUX4 = 0x8000
+
+  # Context-related flags, see freeglut_state.c
+  INIT_MAJOR_VERSION = 0x0200
+  INIT_MINOR_VERSION = 0x0201
+  INIT_FLAGS = 0x0202
+  INIT_PROFILE = 0x0203
+
+  # Flags for glutInitContextFlags, see freeglut_init.c
+  DEBUG = 0x0001
+  FORWARD_COMPATIBLE = 0x0002
+
+
+  # Flags for glutInitContextProfile, see freeglut_init.c
+  CORE_PROFILE = 0x0001
+  COMPATIBILITY_PROFILE = 0x0002
+
+  # Multi-touch/multi-pointer extensions
+  HAS_MULTI = 1
+
+  # GLUT API macro definitions -- the display mode definitions
+  CAPTIONLESS = 0x0400
+  BORDERLESS = 0x0800
+  SRGB = 0x1000
 end
