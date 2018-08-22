@@ -10,6 +10,8 @@ lib LibGlut
 
   # Process loop function
   fun main_loop = glutMainLoop() : Void
+  fun main_loop_event = glutMainLoopEvent() : Void
+  fun leave_main_loop = glutLeaveMainLoop() : Void
 
   # Window management functions
   fun create_window = glutCreateWindow(title : LibC::Char*) : LibC::Int
