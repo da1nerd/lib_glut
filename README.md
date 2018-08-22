@@ -1,9 +1,9 @@
 # lib_glut
 
-Glut bindings written in Crystal.
+LibGlut offers Crystal bindings for [Freeglut](http://freeglut.sourceforge.net/).
 
-LibGlut offers Crystal bindings for glut.
-The binding nomenclature is a direct port with a few adjustments:
+A few adjustments have been made to nomenclature to follow the Crystal style guide
+and improve readability:
 
 * the `glut` prefix has been removed from all functions and constants.
 * method names are snake_case rather than camelCase.
