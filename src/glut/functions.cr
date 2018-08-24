@@ -70,8 +70,8 @@ lib LibGlut
   fun special_func = glutSpecialFunc(callback : (LibC::Int, LibC::Int, LibC::Int) -> Void) : Void
   fun reshape_func = glutReshapeFunc(callback : (LibC::Int, LibC::Int) -> Void) : Void
   fun visibility_func = glutVisibilityFunc(callback : LibC::Int -> Void) : Void
-  fun display_func = glutDisplayFunc(callback : Void -> Void) : Void
-  fun close_func = glutCloseFunc(callback : Void -> Void) : Void
+  fun display_func = glutDisplayFunc(callback : -> Void) : Void
+  fun close_func = glutCloseFunc(callback : -> Void) : Void
   fun mouse_func = glutMouseFunc(callback : (LibC::Int, LibC::Int, LibC::Int, LibC::Int) -> Void) : Void
   fun motion_func = glutMotionFunc(callback : (LibC::Int, LibC::Int) -> Void) : Void
   fun passive_motion_func = glutPassiveMotionFunc(callback : (LibC::Int, LibC::Int) -> Void) : Void
@@ -82,7 +82,7 @@ lib LibGlut
   fun joystick_func = glutJoystickFunc(callback : (LibC::UInt, LibC::Int, LibC::Int, LibC::Int) -> Void, pollinterval : LibC::Int) : Void
   fun menu_state_func = glutMenuStateFunc(callback : LibC::Int -> Void) : Void
   fun menu_status_func = glutMenuStatusFunc(callback  : (LibC::Int, LibC::Int, LibC::Int) -> Void) : Void
-  fun overlay_display_func = glutOverlayDisplayFunc(callback : Void -> Void) : Void
+  fun overlay_display_func = glutOverlayDisplayFunc(callback : -> Void) : Void
   fun window_status_func = glutWindowStatusFunc(callback : LibC::Int -> Void) : Void
 
   fun spaceball_motion_func = glutSpaceballMotionFunc(callback : (LibC::Int, LibC::Int, LibC::Int) -> Void) : Void
