@@ -1,4 +1,4 @@
-# lib_glut
+# LibGLUT
 
 LibGlut offers Crystal bindings for [Freeglut](http://freeglut.sourceforge.net/).
 
