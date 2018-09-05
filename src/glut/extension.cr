@@ -1,3 +1,4 @@
+# Extensions to freeglut that provide context support
 @[Link(ldflags: "#{__DIR__}/lib_extension/libextension.a")]
 lib LibGlut
   fun display_func_context = glutDisplayFuncWithContext(callback : Void* -> Void, data : Void*) : Void
