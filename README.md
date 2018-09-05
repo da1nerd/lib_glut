@@ -28,6 +28,19 @@ require "lib_glut"
 
 TODO: Write usage instructions here
 
+### Extensions
+
+Since freeglut does not currently support passing context to callback functions I've included some additional methods that add this feature.
+All extensions are named after their corresponding function with an `_x` appended.
+
+For example:
+```crystal
+LibGLUT.display_func # standard freeglut method
+LibGLUT.display_func_x # extended function with support for passing in a context.
+```
+
+The ability to pass context to a c function means we can preserve closure while calling these methods.
+
 ## Development
 
 TODO: Write development instructions here
