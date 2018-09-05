@@ -1,5 +1,5 @@
 require "./glut/**"
 
 @[Link("glut")]
-lib LibGlut
+lib LibGLUT
 end

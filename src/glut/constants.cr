@@ -1,4 +1,4 @@
-lib LibGlut
+lib LibGLUT
 
   # GLUT API macro definitions -- the special key codes
   KEY_F1 = 0x0001

@@ -1,4 +1,4 @@
-lib LibGlut
+lib LibGLUT
   alias Enum = UInt32
 
   # Initialization functions
