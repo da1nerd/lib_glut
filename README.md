@@ -18,6 +18,8 @@ dependencies:
     github: neutrinog/lib_glut
 ```
 
+You must also install `cmake`, `freeglut`, and `opengl`.
+
 ## Usage
 
 ```crystal
